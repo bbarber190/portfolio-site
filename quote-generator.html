@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f0f8ff;
+    }
+    #quote-box {
+      font-size: 1.5rem;
+      margin: 2rem;
+    }
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Motivational Quote Generator</h1>
+  <div id="quote-box">Click the button for a quote!</div>
+  <button onclick="generateQuote()">New Quote</button>
+
+  <script>
+    const quotes = [
+      "Fall seven times, stand up eight.",
+      "The only limit is your mind.",
+      "Code. Sleep. Repeat.",
+      "Discipline > Motivation.",
+      "Don’t watch the clock; do what it does — keep going.",
+      "Push through. It's worth it."
+    ];
+
+    function generateQuote() {
+      const box = document.getElementById('quote-box');
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      box.textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
